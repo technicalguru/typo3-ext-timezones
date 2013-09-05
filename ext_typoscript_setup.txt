@@ -1,0 +1,11 @@
+plugin.tx_timezones_pi1 {
+	server_zone = Europe/Amsterdam
+	default_zone = Europe/Amsterdam
+}
+
+plugin.tx_timezones_pi2 {
+	templateFile = EXT:timezones/pi2/template.tpl
+}
+
+includeLibs.tx_timezones_pi1 = EXT:timezones/pi1/class.tx_timezones_pi1.php
+
