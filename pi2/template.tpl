@@ -18,5 +18,5 @@
 ###SELECT_LABEL### ###SELECTOR###
 <p/>
 <input type="submit" value="###SUBMIT###"/>
-</form;
+</form>
 <!-- ###PI2_FORM### end -->
