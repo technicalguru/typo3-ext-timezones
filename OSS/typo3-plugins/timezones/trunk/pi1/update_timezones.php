@@ -10,7 +10,7 @@
 *********************************************/
 
 // Path to zdump
-$zdump = '/usr/sbin/zdump';
+$zdump = '/usr/bin/zdump';
 
 // Load timezone information
 include_once('timezones.inc.php');
@@ -24,14 +24,24 @@ fputs($outfp, "\$GLOBALS['TX_TIMEZONES']['OFFSETS'] = array(\n");
 foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 	
 	$output = array();
-	exec("$zdump $zone -v", $output);
+	exec("$zdump $zone -v", $output, $rc);
+	if ($rc) {
+		echo "Oops: $zone - rc=$rc\n";
+	}
 
 	fputs($outfp, "    '$zone' => array(\n");
+
+	// JS file
+	$outfpjs = fopen('../res/js/'.makeFilename($zone).'.js', 'w');
+	fputs($outfpjs, "// Timezone definition for $zone\n");
+	fputs($outfpjs, "var tx_timezone_id = '$zone';\n");
+	fputs($outfpjs, "var tx_timezone_props = Array(\n");
 
 	$start = array(0, false, false);
 	$prev  = array(0, false, false);
 
 	foreach ($output AS $line) {
+		// Europe/Amsterdam  Sun Oct 25 01:00:00 2499 UTC = Sun Oct 25 02:00:00 2499 CET isdst=0 gmtoff=3600
 		// split line at =
 		$line = trim($line);
 		list($utcinfo, $linfo) = split('=', $line, 2);
@@ -42,11 +52,15 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 
 		$L = split(' ', $linfo);
 		foreach ($L AS $s) {
-			list($key, $value) = split('=', $s, 2);
-			if ($key == 'isdst') {
-				$dst = $value;
-			} else if ($key == 'gmtoff') {
-				$offset = $value;
+			$arr = split('=', $s, 2);
+			if (count($arr) > 1) {
+				$key = $arr[0];
+				$value = $arr[1];
+				if ($key == 'isdst') {
+					$dst = $value;
+				} else if ($key == 'gmtoff') {
+					$offset = $value;
+				}
 			}
 		}
 
@@ -61,6 +75,7 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 
 				// print period now
 				printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+				printJsLine($outfpjs, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 				$start = array($timestamp, $dst, $offset);
 			}
 
@@ -71,6 +86,9 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 	// Output last information
 	printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 	fputs($outfp, "    ),\n");
+
+	fputs($outfpjs, ");\n");
+	fclose($outfpjs);
 }
 
 fputs($outfp, ");\n\n");
@@ -82,6 +100,15 @@ echo "</pre>";
 function printLine($outfp, $zone, $start, $stop, $dst, $offset) {
 	fputs($outfp, "        array($start, $stop, $dst, $offset),\n");
 	echo "$zone: $start - $stop DST=$dst GMTOFFSET=$offset\n";
+}
+
+function printJsLine($outfp, $zone, $start, $stop, $dst, $offset) {
+	fputs($outfp, "    Array($start, $stop, $dst, $offset),\n");
+	echo "$zone: $start - $stop DST=$dst GMTOFFSET=$offset\n";
+}
+
+function makeFilename($zone) {
+	return preg_replace('/[^A-Za-z0-9]/', '', $zone);
 }
 
 ?>
