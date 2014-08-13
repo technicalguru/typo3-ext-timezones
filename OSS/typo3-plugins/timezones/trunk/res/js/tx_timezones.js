@@ -3,7 +3,6 @@ function tx_timezones_adjust_date(d) {
 	if (typeof tx_timezone_id !== 'undefined') {
 		var utcOffset = d.getTimezoneOffset()*60;
 		var utcTime = d.getTime();
-		alert("Your offset is: "+utcOffset);
 		
 		// Find the target offset
 		var targetOffset = utcOffset;
@@ -12,7 +11,6 @@ function tx_timezones_adjust_date(d) {
 				targetOffset = 0 - tx_timezone_props[i][3];
 			}
 		}
-		alert("Target offset is: "+targetOffset);
 
 		// Adjust the date object
 		d.setTime(utcTime + (utcOffset-targetOffset)*1000);

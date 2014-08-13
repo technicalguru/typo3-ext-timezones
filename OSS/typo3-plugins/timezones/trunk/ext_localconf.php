@@ -13,4 +13,5 @@ t3lib_extMgm::addTypoScript($_EXTKEY,'editorcfg','
 ',43);
 t3lib_extMgm::addPItoST43($_EXTKEY,'pi2/class.tx_timezones_pi2.php','_pi2','list_type',0);
 
+t3lib_extMgm::addPItoST43($_EXTKEY,'pi3/class.tx_timezones_pi3.php','_pi3','list_type',0);
 ?>

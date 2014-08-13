@@ -7,5 +7,8 @@ plugin.tx_timezones_pi2 {
 	templateFile = EXT:timezones/pi2/template.tpl
 }
 
+plugin.tx_timezones_pi3 {
+}
+
 includeLibs.tx_timezones_pi1 = EXT:timezones/pi1/class.tx_timezones_pi1.php
 
