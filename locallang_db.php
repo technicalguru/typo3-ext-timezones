@@ -9,10 +9,12 @@ $LOCAL_LANG = Array (
 	'default' => Array (
 		'fe_users.tx_timezones_timezone' => 'Timezone ID',	
 		'tt_content.list_type_pi2' => 'Timezones Plugin',
+		'tt_content.list_type_pi3' => 'Timezones Javascript Plugin',
 	),
 	'de' => Array (
 		'fe_users.tx_timezones_timezone' => 'Zeitzonen-Identifier',	
 		'tt_content.list_type_pi2' => 'Timezones Plugin',
+		'tt_content.list_type_pi3' => 'Timezones Javascript Plugin',
 	),
 );
 ?>

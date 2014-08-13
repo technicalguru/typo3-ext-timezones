@@ -62,6 +62,7 @@ class tx_timezones_pi1 extends tslib_pibase {
 			$GLOBALS['TYPO3_DB']->exec_UPDATEquery('fe_users',
 			       'uid='.$GLOBALS['TSFE']->fe_user->user['uid'], $fields);
 		}
+
 	}
 
 	function initZones() {
