@@ -1,6 +1,7 @@
 // Timezone definition for Africa/Casablanca
 var tx_timezone_id = 'Africa/Casablanca';
 var tx_timezone_props = Array(
+
     Array(0, 141263999, 0, 0),
     Array(141264000, 147221999, 1, 3600),
     Array(147222000, 199756799, 0, 0),
@@ -1017,4 +1018,5 @@ var tx_timezone_props = Array(
     Array(16669764000, 16687907999, 1, 3600),
     Array(16687908000, 16701213599, 0, 0),
     Array(16701213600, 16719357599, 1, 3600),
+    Array(16719357600, 4140154800, 0, 0)
 );

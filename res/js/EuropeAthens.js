@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Athens
 var tx_timezone_id = 'Europe/Athens';
 var tx_timezone_props = Array(
+
     Array(0, 166485599, 0, 7200),
     Array(166485600, 186184799, 1, 10800),
     Array(186184800, 198028799, 0, 7200),
@@ -1051,4 +1052,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 10800),
     Array(16687904400, 16701209999, 0, 7200),
     Array(16701210000, 16719353999, 1, 10800),
+    Array(16719354000, 4140154800, 0, 7200)
 );

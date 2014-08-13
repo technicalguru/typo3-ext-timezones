@@ -1,6 +1,7 @@
 // Timezone definition for America/Mexico_City
 var tx_timezone_id = 'America/Mexico_City';
 var tx_timezone_props = Array(
+
     Array(0, 828863999, 0, -21600),
     Array(828864000, 846399599, 1, -18000),
     Array(846399600, 860313599, 0, -21600),
@@ -1009,4 +1010,5 @@ var tx_timezone_props = Array(
     Array(16670390400, 16687925999, 1, -18000),
     Array(16687926000, 16701839999, 0, -21600),
     Array(16701840000, 16719375599, 1, -18000),
+    Array(16719375600, 4140154800, 0, -21600)
 );

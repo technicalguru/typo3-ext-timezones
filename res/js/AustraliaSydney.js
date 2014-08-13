@@ -1,6 +1,7 @@
 // Timezone definition for Australia/Sydney
 var tx_timezone_id = 'Australia/Sydney';
 var tx_timezone_props = Array(
+
     Array(0, 57686399, 0, 36000),
     Array(57686400, 67967999, 1, 39600),
     Array(67968000, 89135999, 0, 36000),
@@ -1058,4 +1059,5 @@ var tx_timezone_props = Array(
     Array(16670332800, 16686057599, 0, 36000),
     Array(16686057600, 16701782399, 1, 39600),
     Array(16701782400, 16717507199, 0, 36000),
+    Array(16717507200, 4140154800, 1, 39600)
 );

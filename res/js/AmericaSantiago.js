@@ -1,6 +1,7 @@
 // Timezone definition for America/Santiago
 var tx_timezone_id = 'America/Santiago';
 var tx_timezone_props = Array(
+
     Array(0, 7527599, 1, -10800),
     Array(7527600, 24465599, 0, -14400),
     Array(24465600, 37767599, 1, -10800),
@@ -887,4 +888,5 @@ var tx_timezone_props = Array(
     Array(13926394800, 13937889599, 0, -14400),
     Array(13937889600, 13958449199, 1, -10800),
     Array(13958449200, 13969339199, 0, -14400),
+    Array(13969339200, 4140154800, 1, -10800)
 );

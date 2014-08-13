@@ -1,6 +1,7 @@
 // Timezone definition for America/Buenos_Aires
 var tx_timezone_id = 'America/Buenos_Aires';
 var tx_timezone_props = Array(
+
     Array(0, 128141999, 0, -10800),
     Array(128142000, 136605599, 1, -7200),
     Array(136605600, 596948399, 0, -10800),
@@ -17,4 +18,5 @@ var tx_timezone_props = Array(
     Array(1198983600, 1205632799, 1, -7200),
     Array(1205632800, 1224385199, 0, -10800),
     Array(1224385200, 1237082399, 1, -7200),
+    Array(1237082400, 4140154800, 0, -10800)
 );

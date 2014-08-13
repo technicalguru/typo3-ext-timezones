@@ -39,6 +39,7 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 
 	$start = array(0, false, false);
 	$prev  = array(0, false, false);
+	$lastPrinted = 0;
 
 	foreach ($output AS $line) {
 		// Europe/Amsterdam  Sun Oct 25 01:00:00 2499 UTC = Sun Oct 25 02:00:00 2499 CET isdst=0 gmtoff=3600
@@ -63,6 +64,7 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 				}
 			}
 		}
+		//echo "$zone => $utcinfo / $linfo => $timestamp offset=$offset\n";
 
 		if ($timestamp > 0) {
 			if ($start[1] === false) {
@@ -75,19 +77,23 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 
 				// print period now
 				printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
-				printJsLine($outfpjs, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+				printJsLine($outfpjs, $lastPrinted, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+				$lastPrinted = 1;
 				$start = array($timestamp, $dst, $offset);
 			}
 
 			$prev = array($timestamp, $dst, $offset);
+		} else if ($utcinfo > 4140154800) {
+			$prev = array(4140154800,  $dst, $offset);
 		}
 	}
 
 	// Output last information
 	printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+	printJsLine($outfpjs, $lastPrinted, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 	fputs($outfp, "    ),\n");
 
-	fputs($outfpjs, ");\n");
+	fputs($outfpjs, "\n);\n");
 	fclose($outfpjs);
 }
 
@@ -102,8 +108,13 @@ function printLine($outfp, $zone, $start, $stop, $dst, $offset) {
 	echo "$zone: $start - $stop DST=$dst GMTOFFSET=$offset\n";
 }
 
-function printJsLine($outfp, $zone, $start, $stop, $dst, $offset) {
-	fputs($outfp, "    Array($start, $stop, $dst, $offset),\n");
+function printJsLine($outfp, $lastPrinted, $zone, $start, $stop, $dst, $offset) {
+	if ($lastPrinted) {
+		fputs($outfp, ",\n");
+	} else {
+		fputs($outfp, "\n");
+	}
+	fputs($outfp, "    Array($start, $stop, $dst, $offset)");
 	echo "$zone: $start - $stop DST=$dst GMTOFFSET=$offset\n";
 }
 

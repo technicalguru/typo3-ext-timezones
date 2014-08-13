@@ -1,6 +1,7 @@
 // Timezone definition for Pacific/Auckland
 var tx_timezone_id = 'Pacific/Auckland';
 var tx_timezone_props = Array(
+
     Array(0, 152632799, 0, 43200),
     Array(152632800, 162309599, 1, 46800),
     Array(162309600, 183477599, 0, 43200),
@@ -1052,4 +1053,5 @@ var tx_timezone_props = Array(
     Array(16670325600, 16685445599, 0, 43200),
     Array(16685445600, 16701775199, 1, 46800),
     Array(16701775200, 16716895199, 0, 43200),
+    Array(16716895200, 4140154800, 1, 46800)
 );

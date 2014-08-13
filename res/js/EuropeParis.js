@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Paris
 var tx_timezone_id = 'Europe/Paris';
 var tx_timezone_props = Array(
+
     Array(0, 196819199, 0, 3600),
     Array(196819200, 212540399, 1, 7200),
     Array(212540400, 228877199, 0, 3600),
@@ -1049,4 +1050,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 7200),
     Array(16687904400, 16701209999, 0, 3600),
     Array(16701210000, 16719353999, 1, 7200),
+    Array(16719354000, 4140154800, 0, 3600)
 );

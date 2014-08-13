@@ -1,6 +1,7 @@
 // Timezone definition for Atlantic/Azores
 var tx_timezone_id = 'Atlantic/Azores';
 var tx_timezone_props = Array(
+
     Array(0, 228272399, 0, -3600),
     Array(228272400, 243997199, 1, 0),
     Array(243997200, 260326799, 0, -3600),
@@ -1045,4 +1046,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 0),
     Array(16687904400, 16701209999, 0, -3600),
     Array(16701210000, 16719353999, 1, 0),
+    Array(16719354000, 4140154800, 0, -3600)
 );

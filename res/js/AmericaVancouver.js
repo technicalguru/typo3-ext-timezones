@@ -1,6 +1,7 @@
 // Timezone definition for America/Vancouver
 var tx_timezone_id = 'America/Vancouver';
 var tx_timezone_props = Array(
+
     Array(0, 9971999, 0, -28800),
     Array(9972000, 25693199, 1, -25200),
     Array(25693200, 41421599, 0, -28800),
@@ -1061,4 +1062,5 @@ var tx_timezone_props = Array(
     Array(16667978400, 16688537999, 1, -25200),
     Array(16688538000, 16699427999, 0, -28800),
     Array(16699428000, 16719987599, 1, -25200),
+    Array(16719987600, 4140154800, 0, -28800)
 );

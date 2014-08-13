@@ -1,6 +1,7 @@
 // Timezone definition for Pacific/Fiji
 var tx_timezone_id = 'Pacific/Fiji';
 var tx_timezone_props = Array(
+
     Array(0, 909842399, 0, 43200),
     Array(909842400, 920123999, 1, 46800),
     Array(920124000, 941896799, 0, 43200),
@@ -816,4 +817,5 @@ var tx_timezone_props = Array(
     Array(13981381200, 14005576799, 0, 43200),
     Array(14005576800, 14012830799, 1, 46800),
     Array(14012830800, 14037026399, 0, 43200),
+    Array(14037026400, 4140154800, 1, 46800)
 );

@@ -1,6 +1,7 @@
 // Timezone definition for America/Chicago
 var tx_timezone_id = 'America/Chicago';
 var tx_timezone_props = Array(
+
     Array(0, 9964799, 0, -21600),
     Array(9964800, 25685999, 1, -18000),
     Array(25686000, 41414399, 0, -21600),
@@ -1061,4 +1062,5 @@ var tx_timezone_props = Array(
     Array(16667971200, 16688530799, 1, -18000),
     Array(16688530800, 16699420799, 0, -21600),
     Array(16699420800, 16719980399, 1, -18000),
+    Array(16719980400, 4140154800, 0, -21600)
 );

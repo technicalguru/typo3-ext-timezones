@@ -1,6 +1,7 @@
 // Timezone definition for America/Halifax
 var tx_timezone_id = 'America/Halifax';
 var tx_timezone_props = Array(
+
     Array(0, 9957599, 0, -14400),
     Array(9957600, 25678799, 1, -10800),
     Array(25678800, 41407199, 0, -14400),
@@ -1061,4 +1062,5 @@ var tx_timezone_props = Array(
     Array(16667964000, 16688523599, 1, -10800),
     Array(16688523600, 16699413599, 0, -14400),
     Array(16699413600, 16719973199, 1, -10800),
+    Array(16719973200, 4140154800, 0, -14400)
 );

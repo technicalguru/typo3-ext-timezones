@@ -1,6 +1,7 @@
 // Timezone definition for America/Indiana/Indianapolis
 var tx_timezone_id = 'America/Indiana/Indianapolis';
 var tx_timezone_props = Array(
+
     Array(0, 9961199, 0, -18000),
     Array(9961200, 25682399, 1, -14400),
     Array(25682400, 1143961199, 0, -18000),
@@ -991,4 +992,5 @@ var tx_timezone_props = Array(
     Array(16667967600, 16688527199, 1, -14400),
     Array(16688527200, 16699417199, 0, -18000),
     Array(16699417200, 16719976799, 1, -14400),
+    Array(16719976800, 4140154800, 0, -18000)
 );

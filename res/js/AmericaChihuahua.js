@@ -1,6 +1,7 @@
 // Timezone definition for America/Chihuahua
 var tx_timezone_id = 'America/Chihuahua';
 var tx_timezone_props = Array(
+
     Array(0, 828863999, 0, -21600),
     Array(828864000, 846399599, 1, -18000),
     Array(846399600, 860313599, 0, -21600),
@@ -1008,4 +1009,5 @@ var tx_timezone_props = Array(
     Array(16670394000, 16687929599, 1, -21600),
     Array(16687929600, 16701843599, 0, -25200),
     Array(16701843600, 16719379199, 1, -21600),
+    Array(16719379200, 4140154800, 0, -25200)
 );

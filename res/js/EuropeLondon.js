@@ -1,6 +1,7 @@
 // Timezone definition for Europe/London
 var tx_timezone_id = 'Europe/London';
 var tx_timezone_props = Array(
+
     Array(0, 57722399, 0, 3600),
     Array(57722400, 69818399, 0, 0),
     Array(69818400, 89171999, 1, 3600),
@@ -1058,4 +1059,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 3600),
     Array(16687904400, 16701209999, 0, 0),
     Array(16701210000, 16719353999, 1, 3600),
+    Array(16719354000, 4140154800, 0, 0)
 );

@@ -1,6 +1,7 @@
 // Timezone definition for America/Anchorage
 var tx_timezone_id = 'America/Anchorage';
 var tx_timezone_props = Array(
+
     Array(0, 9979199, 0, -36000),
     Array(9979200, 25700399, 1, -32400),
     Array(25700400, 41428799, 0, -36000),
@@ -1060,4 +1061,5 @@ var tx_timezone_props = Array(
     Array(16667982000, 16688541599, 1, -28800),
     Array(16688541600, 16699431599, 0, -32400),
     Array(16699431600, 16719991199, 1, -28800),
+    Array(16719991200, 4140154800, 0, -32400)
 );

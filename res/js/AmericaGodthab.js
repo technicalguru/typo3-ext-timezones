@@ -1,6 +1,7 @@
 // Timezone definition for America/Godthab
 var tx_timezone_id = 'America/Godthab';
 var tx_timezone_props = Array(
+
     Array(0, 323845199, 0, -10800),
     Array(323845200, 338950799, 1, -7200),
     Array(338950800, 354675599, 0, -10800),
@@ -835,4 +836,5 @@ var tx_timezone_props = Array(
     Array(13418960400, 13437709199, 1, -7200),
     Array(13437709200, 13451014799, 0, -10800),
     Array(13451014800, 13469158799, 1, -7200),
+    Array(13469158800, 4140154800, 0, -10800)
 );

@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Moscow
 var tx_timezone_id = 'Europe/Moscow';
 var tx_timezone_props = Array(
+
     Array(0, 354920399, 0, 10800),
     Array(354920400, 370727999, 1, 14400),
     Array(370728000, 386456399, 0, 10800),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256425200, 1269730799, 0, 10800),
     Array(1269730800, 1288479599, 1, 14400),
     Array(1288479600, 1301180399, 0, 10800),
+    Array(1301180400, 4140154800, 0, 14400)
 );

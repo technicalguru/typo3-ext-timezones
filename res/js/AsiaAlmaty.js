@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Almaty
 var tx_timezone_id = 'Asia/Almaty';
 var tx_timezone_props = Array(
+
     Array(0, 354909599, 0, 21600),
     Array(354909600, 370717199, 1, 25200),
     Array(370717200, 386445599, 0, 21600),
@@ -47,4 +48,5 @@ var tx_timezone_props = Array(
     Array(1048968000, 1067111999, 1, 25200),
     Array(1067112000, 1080417599, 0, 21600),
     Array(1080417600, 1099166399, 1, 25200),
+    Array(1099166400, 4140154800, 0, 21600)
 );

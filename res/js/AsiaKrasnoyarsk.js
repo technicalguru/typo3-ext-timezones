@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Krasnoyarsk
 var tx_timezone_id = 'Asia/Krasnoyarsk';
 var tx_timezone_props = Array(
+
     Array(0, 354905999, 0, 25200),
     Array(354906000, 370713599, 1, 28800),
     Array(370713600, 386441999, 0, 25200),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256410800, 1269716399, 0, 25200),
     Array(1269716400, 1288465199, 1, 28800),
     Array(1288465200, 1301165999, 0, 25200),
+    Array(1301166000, 4140154800, 0, 28800)
 );
