@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Vladivostok
 var tx_timezone_id = 'Asia/Vladivostok';
 var tx_timezone_props = Array(
+
     Array(0, 354895199, 0, 36000),
     Array(354895200, 370702799, 1, 39600),
     Array(370702800, 386431199, 0, 36000),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256400000, 1269705599, 0, 36000),
     Array(1269705600, 1288454399, 1, 39600),
     Array(1288454400, 1301155199, 0, 36000),
+    Array(1301155200, 4140154800, 0, 39600)
 );

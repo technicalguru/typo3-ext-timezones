@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Jerusalem
 var tx_timezone_id = 'Asia/Jerusalem';
 var tx_timezone_props = Array(
+
     Array(0, 142379999, 0, 7200),
     Array(142380000, 150843599, 1, 10800),
     Array(150843600, 167176799, 0, 7200),
@@ -863,4 +864,5 @@ var tx_timezone_props = Array(
     Array(13955241600, 13974159599, 1, 10800),
     Array(13974159600, 13987295999, 0, 7200),
     Array(13987296000, 14005609199, 1, 10800),
+    Array(14005609200, 4140154800, 0, 7200)
 );

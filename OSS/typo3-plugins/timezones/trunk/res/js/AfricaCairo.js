@@ -1,6 +1,7 @@
 // Timezone definition for Africa/Cairo
 var tx_timezone_id = 'Africa/Cairo';
 var tx_timezone_props = Array(
+
     Array(0, 10364399, 0, 7200),
     Array(10364400, 23587199, 1, 10800),
     Array(23587200, 41900399, 0, 7200),
@@ -917,4 +918,5 @@ var tx_timezone_props = Array(
     Array(14273964000, 14287265999, 1, 10800),
     Array(14287266000, 14305413599, 0, 7200),
     Array(14305413600, 14318715599, 1, 10800),
+    Array(14318715600, 4140154800, 0, 7200)
 );

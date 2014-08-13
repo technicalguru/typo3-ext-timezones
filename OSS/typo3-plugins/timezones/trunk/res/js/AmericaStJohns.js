@@ -1,6 +1,7 @@
 // Timezone definition for America/St_Johns
 var tx_timezone_id = 'America/St_Johns';
 var tx_timezone_props = Array(
+
     Array(0, 9955799, 0, -12600),
     Array(9955800, 25676999, 1, -9000),
     Array(25677000, 41405399, 0, -12600),
@@ -1061,4 +1062,5 @@ var tx_timezone_props = Array(
     Array(16667962200, 16688521799, 1, -9000),
     Array(16688521800, 16699411799, 0, -12600),
     Array(16699411800, 16719971399, 1, -9000),
+    Array(16719971400, 4140154800, 0, -12600)
 );

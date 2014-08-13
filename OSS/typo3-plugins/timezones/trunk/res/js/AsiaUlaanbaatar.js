@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Ulaanbaatar
 var tx_timezone_id = 'Asia/Ulaanbaatar';
 var tx_timezone_props = Array(
+
     Array(0, 252435599, 0, 25200),
     Array(252435600, 417974399, 0, 28800),
     Array(417974400, 433781999, 1, 32400),
@@ -46,4 +47,5 @@ var tx_timezone_props = Array(
     Array(1111773600, 1127494799, 1, 32400),
     Array(1127494800, 1143223199, 0, 28800),
     Array(1143223200, 1159549199, 1, 32400),
+    Array(1159549200, 4140154800, 0, 28800)
 );

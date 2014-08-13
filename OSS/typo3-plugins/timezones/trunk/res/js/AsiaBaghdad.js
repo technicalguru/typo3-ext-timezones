@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Baghdad
 var tx_timezone_id = 'Asia/Baghdad';
 var tx_timezone_props = Array(
+
     Array(0, 389048399, 0, 10800),
     Array(389048400, 402263999, 1, 14400),
     Array(402264000, 417905999, 0, 10800),
@@ -53,4 +54,5 @@ var tx_timezone_props = Array(
     Array(1143849600, 1159660799, 1, 14400),
     Array(1159660800, 1175385599, 0, 10800),
     Array(1175385600, 1191196799, 1, 14400),
+    Array(1191196800, 4140154800, 0, 10800)
 );

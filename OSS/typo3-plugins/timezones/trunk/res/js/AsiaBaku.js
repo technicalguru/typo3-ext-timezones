@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Baku
 var tx_timezone_id = 'Asia/Baku';
 var tx_timezone_props = Array(
+
     Array(0, 354916799, 0, 14400),
     Array(354916800, 370724399, 1, 18000),
     Array(370724400, 386452799, 0, 14400),
@@ -1031,4 +1032,5 @@ var tx_timezone_props = Array(
     Array(16669756800, 16687900799, 1, 18000),
     Array(16687900800, 16701206399, 0, 14400),
     Array(16701206400, 16719350399, 1, 18000),
+    Array(16719350400, 4140154800, 0, 14400)
 );

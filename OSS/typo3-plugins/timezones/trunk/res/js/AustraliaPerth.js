@@ -1,6 +1,7 @@
 // Timezone definition for Australia/Perth
 var tx_timezone_id = 'Australia/Perth';
 var tx_timezone_props = Array(
+
     Array(0, 152042399, 0, 28800),
     Array(152042400, 162928799, 1, 32400),
     Array(162928800, 436298399, 0, 28800),
@@ -13,4 +14,5 @@ var tx_timezone_props = Array(
     Array(1193508000, 1206813599, 1, 32400),
     Array(1206813600, 1224957599, 0, 28800),
     Array(1224957600, 1238263199, 1, 32400),
+    Array(1238263200, 4140154800, 0, 28800)
 );

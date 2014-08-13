@@ -1,6 +1,7 @@
 // Timezone definition for Australia/Hobart
 var tx_timezone_id = 'Australia/Hobart';
 var tx_timezone_props = Array(
+
     Array(0, 5673599, 1, 39600),
     Array(5673600, 25631999, 0, 36000),
     Array(25632000, 37727999, 1, 39600),
@@ -1061,4 +1062,5 @@ var tx_timezone_props = Array(
     Array(16670332800, 16686057599, 0, 36000),
     Array(16686057600, 16701782399, 1, 39600),
     Array(16701782400, 16717507199, 0, 36000),
+    Array(16717507200, 4140154800, 1, 39600)
 );

@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Urumqi
 var tx_timezone_id = 'Asia/Urumqi';
 var tx_timezone_props = Array(
+
     Array(0, 325965599, 0, 21600),
     Array(325965600, 515519999, 0, 28800),
     Array(515520000, 527007599, 1, 32400),
@@ -14,4 +15,5 @@ var tx_timezone_props = Array(
     Array(640108800, 653410799, 1, 32400),
     Array(653410800, 671558399, 0, 28800),
     Array(671558400, 684860399, 1, 32400),
+    Array(684860400, 4140154800, 0, 28800)
 );

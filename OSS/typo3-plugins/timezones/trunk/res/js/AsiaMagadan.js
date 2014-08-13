@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Magadan
 var tx_timezone_id = 'Asia/Magadan';
 var tx_timezone_props = Array(
+
     Array(0, 354891599, 0, 39600),
     Array(354891600, 370699199, 1, 43200),
     Array(370699200, 386427599, 0, 39600),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256396400, 1269701999, 0, 39600),
     Array(1269702000, 1288450799, 1, 43200),
     Array(1288450800, 1301151599, 0, 39600),
+    Array(1301151600, 4140154800, 0, 43200)
 );

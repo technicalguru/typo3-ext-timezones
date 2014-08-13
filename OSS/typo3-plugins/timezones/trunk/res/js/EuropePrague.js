@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Prague
 var tx_timezone_id = 'Europe/Prague';
 var tx_timezone_props = Array(
+
     Array(0, 291776399, 0, 3600),
     Array(291776400, 307501199, 1, 7200),
     Array(307501200, 323830799, 0, 3600),
@@ -1043,4 +1044,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 7200),
     Array(16687904400, 16701209999, 0, 3600),
     Array(16701210000, 16719353999, 1, 7200),
+    Array(16719354000, 4140154800, 0, 3600)
 );

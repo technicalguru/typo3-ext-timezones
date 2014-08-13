@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Tehran
 var tx_timezone_id = 'Asia/Tehran';
 var tx_timezone_props = Array(
+
     Array(0, 247177799, 0, 12600),
     Array(247177800, 259271999, 0, 14400),
     Array(259272000, 277757999, 1, 18000),
@@ -99,4 +100,5 @@ var tx_timezone_props = Array(
     Array(2089657800, 2105551799, 1, 16200),
     Array(2105551800, 2121193799, 0, 12600),
     Array(2121193800, 2137087799, 1, 16200),
+    Array(2137087800, 4140154800, 0, 12600)
 );

@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Yekaterinburg
 var tx_timezone_id = 'Asia/Yekaterinburg';
 var tx_timezone_props = Array(
+
     Array(0, 354913199, 0, 18000),
     Array(354913200, 370720799, 1, 21600),
     Array(370720800, 386449199, 0, 18000),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256418000, 1269723599, 0, 18000),
     Array(1269723600, 1288472399, 1, 21600),
     Array(1288472400, 1301173199, 0, 18000),
+    Array(1301173200, 4140154800, 0, 21600)
 );

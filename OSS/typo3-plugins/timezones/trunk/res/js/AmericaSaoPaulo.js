@@ -1,6 +1,7 @@
 // Timezone definition for America/Sao_Paulo
 var tx_timezone_id = 'America/Sao_Paulo';
 var tx_timezone_props = Array(
+
     Array(0, 499748399, 0, -10800),
     Array(499748400, 511235999, 1, -7200),
     Array(511236000, 530593199, 0, -10800),
@@ -1030,4 +1031,5 @@ var tx_timezone_props = Array(
     Array(16666135200, 16687306799, 0, -10800),
     Array(16687306800, 16697584799, 1, -7200),
     Array(16697584800, 16718756399, 0, -10800),
+    Array(16718756400, 4140154800, 1, -7200)
 );

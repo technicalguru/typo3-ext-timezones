@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Bucharest
 var tx_timezone_id = 'Europe/Bucharest';
 var tx_timezone_props = Array(
+
     Array(0, 296603999, 0, 7200),
     Array(296604000, 307486799, 1, 10800),
     Array(307486800, 323816399, 0, 7200),
@@ -1043,4 +1044,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 10800),
     Array(16687904400, 16701209999, 0, 7200),
     Array(16701210000, 16719353999, 1, 10800),
+    Array(16719354000, 4140154800, 0, 7200)
 );

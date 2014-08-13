@@ -1,6 +1,7 @@
 // Timezone definition for Asia/Yakutsk
 var tx_timezone_id = 'Asia/Yakutsk';
 var tx_timezone_props = Array(
+
     Array(0, 354898799, 0, 32400),
     Array(354898800, 370706399, 1, 36000),
     Array(370706400, 386434799, 0, 32400),
@@ -62,4 +63,5 @@ var tx_timezone_props = Array(
     Array(1256403600, 1269709199, 0, 32400),
     Array(1269709200, 1288457999, 1, 36000),
     Array(1288458000, 1301158799, 0, 32400),
+    Array(1301158800, 4140154800, 0, 36000)
 );

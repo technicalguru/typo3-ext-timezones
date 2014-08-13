@@ -1,6 +1,7 @@
 // Timezone definition for Australia/Adelaide
 var tx_timezone_id = 'Australia/Adelaide';
 var tx_timezone_props = Array(
+
     Array(0, 57688199, 0, 34200),
     Array(57688200, 67969799, 1, 37800),
     Array(67969800, 89137799, 0, 34200),
@@ -1058,4 +1059,5 @@ var tx_timezone_props = Array(
     Array(16670334600, 16686059399, 0, 34200),
     Array(16686059400, 16701784199, 1, 37800),
     Array(16701784200, 16717508999, 0, 34200),
+    Array(16717509000, 4140154800, 1, 37800)
 );

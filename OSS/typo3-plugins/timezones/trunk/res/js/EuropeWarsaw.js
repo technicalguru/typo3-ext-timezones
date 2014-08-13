@@ -1,6 +1,7 @@
 // Timezone definition for Europe/Warsaw
 var tx_timezone_id = 'Europe/Warsaw';
 var tx_timezone_props = Array(
+
     Array(0, 228873599, 0, 3600),
     Array(228873600, 243993599, 1, 7200),
     Array(243993600, 260323199, 0, 3600),
@@ -1047,4 +1048,5 @@ var tx_timezone_props = Array(
     Array(16669760400, 16687904399, 1, 7200),
     Array(16687904400, 16701209999, 0, 3600),
     Array(16701210000, 16719353999, 1, 7200),
+    Array(16719354000, 4140154800, 0, 3600)
 );
