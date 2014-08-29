@@ -52,7 +52,7 @@ class tx_timezones_pi1 extends tslib_pibase {
 		$zone = tx_timezones_pi1::get_feuser_zone();
 
 		// Set cookie anyway to user timezone
-		setcookie('typo3_tx_timezone', $zone, time()+60*60*24*365);
+		setcookie('typo3_tx_timezone', $zone, time()+60*60*24*365, '/');
 
 		// Update in FE user profile
 		if ($GLOBALS['TSFE']->loginUser) {
