@@ -3,8 +3,6 @@
  HOW TO UPDATE TIMEZONES
  Install latest timezone RPM!!!
     => http://rpm.pbone.net/index.php3?stat=3&search=timezone&srodzaj=3
- Backup file offsetinfo.inc.php
- Make sure offsetinfo.inc.php is writable for yr webserver
  Call update_timezones.php in yr browser and wait to complete
  Done!
 *********************************************/
@@ -17,10 +15,6 @@ include_once('timezones.inc.php');
 
 echo "<pre>";
 
-$outfp = fopen('offsetinfo.inc.php', 'w');
-fputs($outfp, "<?php\n\n");
-fputs($outfp, "\$GLOBALS['TX_TIMEZONES']['OFFSETS'] = array(\n");
-
 foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 	
 	$output = array();
@@ -29,14 +23,19 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 		echo "Oops: $zone - rc=$rc\n";
 	}
 
-	fputs($outfp, "    '$zone' => array(\n");
-
 	// JS file
 	$outfpjs = fopen('../res/js/'.makeFilename($zone).'.js', 'w');
 	fputs($outfpjs, "// Timezone definition for $zone\n");
 	fputs($outfpjs, "var tx_timezone_id = '$zone';\n");
 	fputs($outfpjs, "var tx_timezone_props = Array(\n");
 
+	// PHP file
+	$outfpphp = fopen('../res/'.makeFilename($zone).'.inc.php', 'w');
+	fputs($outfpphp, "<?php\n\n");
+	fputs($outfpphp, "// Timezone definition for $zone\n");
+	fputs($outfpphp, "\$GLOBALS['TX_TIMEZONES']['OFFSETS']['$zone'] = array(\n");
+
+	// Let's start
 	$start = array(0, false, false);
 	$prev  = array(0, false, false);
 	$lastPrinted = 0;
@@ -76,7 +75,7 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 			if ($prev[2] != $offset) {
 
 				// print period now
-				printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+				printLine($outfpphp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 				printJsLine($outfpjs, $lastPrinted, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 				$lastPrinted = 1;
 				$start = array($timestamp, $dst, $offset);
@@ -89,22 +88,19 @@ foreach ($GLOBALS['TX_TIMEZONES']['TIMEZONES'] AS $zone => $props) {
 	}
 
 	// Output last information
-	printLine($outfp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
+	printLine($outfpphp, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
 	printJsLine($outfpjs, $lastPrinted, $zone, $start[0], $prev[0], $prev[1], $prev[2]);
-	fputs($outfp, "    ),\n");
+	fputs($outfpphp, ");\n\n");
+	fclose($outfpphp);
 
 	fputs($outfpjs, "\n);\n");
 	fclose($outfpjs);
 }
 
-fputs($outfp, ");\n\n");
-fputs($outfp, "?>\n");
-fclose($outfp);
-
 echo "</pre>";
 
 function printLine($outfp, $zone, $start, $stop, $dst, $offset) {
-	fputs($outfp, "        array($start, $stop, $dst, $offset),\n");
+	fputs($outfp, "    array($start, $stop, $dst, $offset),\n");
 	echo "$zone: $start - $stop DST=$dst GMTOFFSET=$offset\n";
 }
 
