@@ -33,9 +33,7 @@ require_once(PATH_tslib.'class.tslib_pibase.php');
 // Load timezones
 require_once(t3lib_extMgm::extPath('timezones').'pi1/timezones.inc.php');
 
-// Load offsets
-require_once(t3lib_extMgm::extPath('timezones').'pi1/offsetinfo.inc.php');
-
+$GLOBALS['TX_TIMEZONES']['OFFSETS'] = array();
 $GLOBALS['TX_TIMEZONES']['INIT'] = false;
 
 class tx_timezones_pi1 extends tslib_pibase {
@@ -131,6 +129,10 @@ class tx_timezones_pi1 extends tslib_pibase {
 
 	function getTimezoneEntry($timestamp, $zone) {
 		if (!$GLOBALS['TX_TIMEZONES']['INIT']) tx_timezones_pi1::initZones();
+		if (!isset($GLOBALS['TX_TIMEZONES']['OFFSETS'][$zone])) {
+			// Load offsets of this zone
+			tx_timezones_pi1::loadOffsets($zone);
+		}
 		if (isset($GLOBALS['TX_TIMEZONES']['OFFSETS'][$zone])) {
 			$offsets = $GLOBALS['TX_TIMEZONES']['OFFSETS'][$zone];
 			// Search for correct entry
@@ -139,6 +141,11 @@ class tx_timezones_pi1 extends tslib_pibase {
 			}
 		}
 		return array(0, 2147483647, 0, 0);
+	}
+
+	function loadOffsets($zone) {
+		$filename = preg_replace('/[^A-Za-z0-9]/', '', $zone).'inc.php';
+		require_once(t3lib_extMgm::extPath('timezones').'res/'.$filename);
 	}
 
 	function getOffset($timestamp, $zone) {
